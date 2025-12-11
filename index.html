@@ -199,8 +199,8 @@
     <div id="particle-container"></div>
     
     <header class="header">
-        <h1>이름</h1>
-        <p id="typing-text">직업/역할</p>
+        <h1>이현서</h1>
+        <p id="typing-text">한신대학교 AI.SW계열</p>
     </header>
 
     <main class="container">
@@ -208,8 +208,8 @@
             <div class="profile-image">
                 </div>
             <div>
-                <h2>저는...</h2>
-                <p>간단한 자기소개 문구입니다. 무엇을 하는 사람인지, 어떤 목표를 가지고 있는지 설명합니다. 이 텍스트는 태블릿/데스크톱에서 이미지 옆에 배치됩니다.</p>
+                <h2>안녕하세요! 이현서입니다.</h2>
+                <p>이곳에 자신을 어필할 수 있는 멋진 소개글을 작성해보세요. 자신의 강점, 목표, 흥미 등을 자유롭게 표현할 수 있습니다.</p>
             </div>
         </section>
 
@@ -221,13 +221,13 @@
 
         <section class="contact">
             <h2>연락처</h2>
-            <p>이메일: <a href="mailto:email@example.com">email@example.com</a></p>
-            <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+            <p>이메일: <a href="mailto:email@example.com">hyunseo@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/hyunseo</a></p>
         </section>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 이름. All rights reserved.</p>
+        <p>&copy; 2025 이현서. All rights reserved.</p>
     </footer>
 
     <script>
@@ -239,8 +239,8 @@
                 "HTML5",
                 "CSS3",
                 "JavaScript (ES6+)",
-                "React",
-                "Node.js",
+                "Python",
+                "AI/ML Basics",
                 "Git/GitHub",
                 "Responsive Design",
                 "UI/UX Focus"
@@ -263,38 +263,17 @@
 
 
             // ------------------------------------------
-            // 2. 타이핑 애니메이션 (헤더 텍스트 순환)
+            // 2. 타이핑 애니메이션 제거 (정적 텍스트로 변경)
             // ------------------------------------------
-            const typingElement = document.getElementById('typing-text');
-            const roles = ["웹 개발자", "프론트엔드 엔지니어", "반응형 디자인 전문가", "문제 해결사"];
-            let roleIndex = 0;
-            let charIndex = 0;
+            // 타이핑 효과가 필요 없으므로 관련 스크립트를 제거하거나 주석 처리합니다.
+            // const typingElement = document.getElementById('typing-text');
+            // const roles = ["웹 개발자", "프론트엔드 엔지니어", "반응형 디자인 전문가", "문제 해결사"];
+            // let roleIndex = 0;
+            // let charIndex = 0;
 
-            function type() {
-                const currentRole = roles[roleIndex];
-                if (charIndex < currentRole.length) {
-                    typingElement.textContent += currentRole.charAt(charIndex);
-                    charIndex++;
-                    setTimeout(type, 100); // 타이핑 속도
-                } else {
-                    setTimeout(erase, 1500); // 다 치고 잠시 대기
-                }
-            }
-
-            function erase() {
-                const currentRole = roles[roleIndex];
-                if (charIndex > 0) {
-                    typingElement.textContent = currentRole.substring(0, charIndex - 1);
-                    charIndex--;
-                    setTimeout(erase, 50); // 지우는 속도
-                } else {
-                    roleIndex = (roleIndex + 1) % roles.length; // 다음 역할로 이동
-                    setTimeout(type, 500); // 다음 역할 타이핑 시작 전 대기
-                }
-            }
-            
-            // 초기 실행
-            type();
+            // function type() { ... }
+            // function erase() { ... }
+            // type();
 
             // ------------------------------------------
             // 3. 움직이는 배경 (Particle Animation)
